@@ -1,0 +1,5 @@
+library(forecast) 
+sales_ts <- ts(c(12000, 15000, 18000, 16000, 20000, 22000), start=c(2023,1), frequency=12) 
+forecast_result <- forecast(auto.arima(sales_ts), h=3) 
+print(forecast_result) 
+plot(forecast_result)
