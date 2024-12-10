@@ -1,7 +1,13 @@
 library(dplyr)
 
 # Empty data frame
-student_data <- data.frame(Name = character(0), Math_Score = numeric(0), Science_Score = numeric(0), History_Score = numeric(0), Attendance = numeric(0))
+student_data <- data.frame(
+  Name = character(0), 
+  Math_Score = numeric(0), 
+  Science_Score = numeric(0), 
+  History_Score = numeric(0), 
+  Attendance = numeric(0)
+)
 
 # Add student, calculate average, identify low attendance, generate report
 while (TRUE) {
