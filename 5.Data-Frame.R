@@ -25,7 +25,8 @@ while (TRUE) {
     report <- merge(
       student_data %>% mutate(Average_Score = (Math_Score + Science_Score + History_Score) / 3) %>% select(Name, Average_Score),
       student_data %>% filter(Attendance < 70) %>% select(Name, Attendance), 
-      by = "Name", all = TRUE)
+      by = "Name", all = TRUE
+    )
     report$Attendance[is.na(report$Attendance)] <- 100
     cat("Performance Report:\n")
     print(report)
